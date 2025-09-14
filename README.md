@@ -1,42 +1,44 @@
-# Spotify Hybrid Recommender 🎵
+# 🎧 Spotify Hybrid Recommender
 
-This project explores and compares two music recommendation system approaches — **Content-Based Filtering** and **Hybrid Filtering** — using a subset of the **Spotify Tracks Dataset**. The aim is to improve recommendation **relevance**, **personalization**, and **user satisfaction** by combining audio features with popularity metrics.
+A smart music recommendation system that combines the **power of content-based filtering** with the **popularity of trending tracks** — giving users suggestions that are both **relevant** and **appealing**.
 
-## 🚀 Project Highlights
-- Dataset: 15,000 sampled tracks from Spotify’s 230K+ track dataset
-- Features used: genre, popularity, acousticness, energy, danceability, etc.
-- Implemented Models:
-  - 🔍 Content-Based Filtering (using cosine similarity)
-  - ⚖️ Hybrid Filtering (70% similarity + 30% popularity)
-- Evaluation: Average popularity of top-10 recommended tracks
-- Results: Hybrid model yielded more relevant and widely appealing recommendations
+---
 
-## 📊 Results Snapshot
+## 🔍 Overview
 
-| Method          | Avg. Popularity (Top-10) |
-|-----------------|--------------------------|
-| Content-Based   | 44.18                    |
-| Hybrid          | 69.9                     |
+This project explores and compares two approaches to building music recommendation systems using a subset of the **Spotify Tracks Dataset**:
 
-## 📁 Contents
-- `notebooks/` – Jupyter notebooks for model development
-- `data/` – Processed dataset subset (15K tracks)
-- `poster/` – Two-page academic poster (PDF)
-- `README.md` – Project overview and setup instructions
+- 🎵 **Content-Based Filtering**: Recommends songs based on similarity in audio features and genre.
+- 🧠 **Hybrid Filtering**: Balances content similarity with popularity to provide smarter recommendations.
 
-## 🛠️ Technologies Used
-- Python, Pandas, NumPy, Scikit-learn
-- Matplotlib, Seaborn
-- Cosine Similarity
-- Data Normalization
+> ⚡ **Goal:** Improve recommendation **relevance**, **personalization**, and **user satisfaction** by combining content similarity with real-world popularity metrics.
 
-## 📌 Conclusion
-Combining **acoustic features** with **popularity scores** results in more engaging and effective music recommendations. The hybrid model is a practical step toward smarter recommendation systems.
+---
 
-## 🧠 Future Work
-- Incorporate collaborative filtering for deeper personalization
-- Build a simple web app demo (e.g., using Streamlit)
+## 📚 Project Highlights
 
-## 📜 License
-MIT License
+- 🎼 **Dataset**: 15,000 sampled tracks from Spotify’s full dataset (232K+ tracks)
+- 🎛 **Features Used**:
+  - Categorical: `genre`, `artist_name`, `track_name`, `track_id`
+  - Numerical: `popularity`, `danceability`, `energy`, `valence`, `tempo`, etc.
+- 🧮 **Models Implemented**:
+  - 🔍 *Content-Based Filtering* using cosine similarity
+  - ⚖️ *Hybrid Filtering* using a weighted score:
+    ```
+    Hybrid Score = 0.7 × Content Similarity + 0.3 × Normalized Popularity
+    ```
+
+---
+
+## 📊 Results at a Glance
+
+| 🔬 Method          | ⭐ Avg. Popularity (Top-10) |
+|-------------------|-----------------------------|
+| Content-Based      | 44.18                       |
+| Hybrid Filtering   | 69.9                        |
+
+✅ **Observation**: Hybrid Filtering consistently produces recommendations that are **more popular** and **engaging** to users without sacrificing relevance.
+
+---
+
 
